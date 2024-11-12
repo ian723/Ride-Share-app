@@ -25,6 +25,6 @@ class LoginController extends Controller
         }
 
         // send the user a one-time use code
-        
+        $user->notify();
     }
 }
