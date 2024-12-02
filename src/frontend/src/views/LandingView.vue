@@ -1,6 +1,6 @@
 <template>
   <div class="pt-16">
-    <h1 class="text-3xl font-semibold mb-4">Andrewber</h1>
+    <h1 class="text-3xl font-semibold mb-4">Ian</h1>
     <div
       class="overflow-hidden shadow sm:rounded-md max-w-sm mx-auto text-left"
     >
@@ -30,7 +30,7 @@ import http from "@/helpers/http";
 const router = useRouter();
 const handleStartDriving = () => {
   http()
-    .get("/api/driver")
+    .get("http://127.0.0.1:8000/api/driver")
     .then((response) => {
       if (response.data.driver) {
         router.push({

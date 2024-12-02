@@ -102,7 +102,7 @@ const updateMapBounds = (mapObject) => {
 
 const broadcastDriverLocation = () => {
   http()
-    .post(`/api/trip/${trip.id}/location`, {
+    .post(`http://127.0.0.1:8000/api/trip/${trip.id}/location`, {
       driver_location: location.current.geometry,
     })
     .then((response) => {})
@@ -113,7 +113,7 @@ const broadcastDriverLocation = () => {
 
 const handlePassengerPickedUp = () => {
   http()
-    .post(`/api/trip/${trip.id}/start`)
+    .post(`http://127.0.0.1:8000/api/trip/${trip.id}/start`)
     .then((response) => {
       title.value = "Travelling to destination...";
       location.$patch({
@@ -131,7 +131,7 @@ const handlePassengerPickedUp = () => {
 
 const handleCompleteTrip = () => {
   http()
-    .post(`/api/trip/${trip.id}/end`)
+    .post(`http://127.0.0.1:8000/api/trip/${trip.id}/end`)
     .then((response) => {
       title.value = "Trip completed!";
 

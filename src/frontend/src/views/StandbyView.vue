@@ -67,7 +67,7 @@ const handleDeclineTrip = () => {
 
 const handleAcceptTrip = () => {
   http()
-    .post(`/api/trip/${trip.id}/accept`, {
+    .post(`http://127.0.0.1:8000/api/trip/${trip.id}/accept`, {
       driver_location: location.current.geometry,
     })
     .then((response) => {

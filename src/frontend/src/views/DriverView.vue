@@ -95,7 +95,7 @@ const driverDetails = reactive({
 });
 const handleSaveDriver = () => {
   http()
-    .post("/api/driver", driverDetails)
+    .post("http://127.0.0.1:8000/api/driver", driverDetails)
     .then((response) => {
       router.push({
         name: "standby",

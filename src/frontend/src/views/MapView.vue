@@ -50,7 +50,7 @@ const gMap = ref(null);
 
 const handleConfirmTrip = () => {
   http()
-    .post("/api/trip", {
+    .post("http://127.0.0.1:8000/api/trip", {
       origin: location.current.geometry,
       destination: location.destination.geometry,
       destination_name: location.destination.name,
